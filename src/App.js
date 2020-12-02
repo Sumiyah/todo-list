@@ -50,14 +50,19 @@ function App() {
           <ul className="list-group">
             {items.map((item, i) =>
               <div>
-                <li className={item.myStatus ? 'text-success' : ""} key={i} onClick={() => changeState(i)}>{item.myItem}</li>
-                
+                <li className={item.myStatus ? 'text-success' : ""} key={i} >
+                <span onClick={() => changeState(i)}>
+                {item.myItem}
+                </span>
+
                 {/* terenary operator ? : */}
                 {item.myStatus ?
-                  <button onClick={() => deleteItem(i)} className="btn btn-sm btn-outline-dark">
-                    Remove
-                  </button>
+                  <a onClick={() => deleteItem(i)} className="close ">
+                    &times;
+                  </a>
                   : ''}
+                </li>
+                
               </div>
             )}
           </ul>

@@ -40,3 +40,8 @@
 strike{
   text-decoration: line-through;
 }
+
+.close{
+  font-size: 1rem !important;
+  cursor: pointer;
+}
